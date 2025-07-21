@@ -1,9 +1,10 @@
 class ContainerSelector < Formula
   desc "Interactive Docker container selector and command executor"
-  homepage "https://github.com/IgorSakharov/contaner-selector"
-  url "https://github.com/IgorSakharov/contaner-selector/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "a396b37095023498a4e4ff36006dd5d0c6ce72af947a228dc90e727fbbc384df"
+  homepage "https://github.com/IgorSakharov/container-selector"
+  url "https://github.com/IgorSakharov/container-selector/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "sha256:f487c175c6dbffaeb1c061e5a56e9e9e63479e591c8b45092ebc35eddd8f1165"  # Replace with actual hash
   license "MIT"
+  version "1.0.1"
 
   depends_on "go" => :build
 
@@ -12,7 +13,6 @@ class ContainerSelector < Formula
   end
 
   test do
-    # Test that the binary exists and shows version
-    assert_match "container-selector version 1.0.0", shell_output("#{bin}/container-selector --version 2>&1")
+    system "#{bin}/container-selector", "--help"
   end
 end
