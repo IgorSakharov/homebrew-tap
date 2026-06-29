@@ -5,20 +5,20 @@
 class Transcriber < Formula
   desc "CLI tool to transcribe audio files via OpenAI Whisper"
   homepage "https://github.com/IgorSakharov/transcriber"
-  version "1.0.2"
+  version "1.0.3"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/IgorSakharov/transcriber/releases/download/v1.0.2/transcriber_darwin_amd64.tar.gz"
-    sha256 "fe783d25ce53edd44ec03cdcca4a3d47798e9e4b615c0e848a9715e6dda3a8af"
+    url "https://github.com/IgorSakharov/transcriber/releases/download/v1.0.3/transcriber_darwin_amd64.tar.gz"
+    sha256 "eb95726a5dedcf0686b2c3407f4b8cff76e5474b1849e50e9dd047941153278e"
 
     define_method(:install) do
       bin.install "transcriber"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/IgorSakharov/transcriber/releases/download/v1.0.2/transcriber_darwin_arm64.tar.gz"
-    sha256 "65663a60f52873313d81294c1b8c9c90a76805ad48336e4c0749d5025bfd8e55"
+    url "https://github.com/IgorSakharov/transcriber/releases/download/v1.0.3/transcriber_darwin_arm64.tar.gz"
+    sha256 "5e94e465c330630e677186267b27c044f906714a0bc2bbd75fa4a400051ce8e2"
 
     define_method(:install) do
       bin.install "transcriber"
